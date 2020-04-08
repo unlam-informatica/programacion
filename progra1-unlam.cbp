@@ -31,9 +31,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="core/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="tp1/ej1/tp1_ej1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tp1/ej1/tp1_ej1.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
