@@ -9,7 +9,7 @@ long tp1_ej1() {
 
     long num = solicitar_numero();
     long factorial = calcular_factorial(num);
-    printf("Factorial de %d: %d\n", num, factorial);
+    printf("Factorial de %ld: %ld\n", num, factorial);
     return factorial;
 }
 
