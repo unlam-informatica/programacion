@@ -7,9 +7,9 @@
 int main() {
     // Seteamos locale para poder utilizar acentos directamente en printf
     setlocale(LC_ALL, "");
-    printf("=============================\n");
-    printf("  Ejercicios Programación 1  \n");
-    printf("=============================\n");
+    printf("=========================================\n");
+    printf("  Ejercicios Programación 1 - Guía 2020  \n");
+    printf("=========================================\n");
 
     int tp = 0;
     int ej = 0;
@@ -20,7 +20,7 @@ int main() {
             if(tp != 1 && tp != 2 && tp != 3) {
                 printf("\nEl número de TP no existe!\n\n");
             } else {
-                printf("\n=== TP %d ===\n", tp);
+                printf("\n******************* TP%d *******************\n", tp);
                 printf("Indica el ejercicio a ejecutar: ");
                 scanf("%d", &ej);
                 fflush( stdin );
@@ -32,6 +32,7 @@ int main() {
                     printf("El número de TP no existe.");
                 }
             }
+            printf("\n**************************************************\n");
         }
     } while(tp != 0);
     return 0;
