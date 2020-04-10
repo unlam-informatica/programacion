@@ -1,24 +1,17 @@
 #include <stdio.h>
 #include "tp1_ej1.h"
+#include "../../core/types.h"
 
 long solicitar_numero();
-long calcular_factorial(long num);
+bigint calcular_factorial(long num);
 
-long tp1_ej1() {
+bigint tp1_ej1() {
     printf("**************** TP1 - EJ1 *******************\n");
 
     long num = solicitar_numero();
     long factorial = calcular_factorial(num);
     printf("Factorial de %ld: %ld\n", num, factorial);
     return factorial;
-}
-
-long calcular_factorial(long num) {
-    if(num != 0) {
-        return calcular_factorial(num - 1) * num;
-    } else {
-        return 1;
-    }
 }
 
 long solicitar_numero() {
@@ -32,4 +25,12 @@ long solicitar_numero() {
         fflush(stdin);
     }
     return ingreso;
+}
+
+bigint calcular_factorial(long num) {
+    if(num != 0) {
+        return calcular_factorial(num - 1) * num;
+    } else {
+        return 1;
+    }
 }
