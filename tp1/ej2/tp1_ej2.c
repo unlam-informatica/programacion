@@ -37,4 +37,4 @@ long calcular_combinatorio(int num, int den) {
     return factorial_numerador / factorial_denominador;
 }
 
-long calcular_factorial(long);
+bigint calcular_factorial(long);

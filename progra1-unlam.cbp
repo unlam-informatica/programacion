@@ -47,6 +47,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tp1/ej2/tp1_ej2.h" />
+		<Unit filename="tp1/ej3/tp1_ej3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tp1/ej3/tp1_ej3.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
