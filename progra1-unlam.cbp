@@ -43,6 +43,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tp1/ej1/tp1_ej1.h" />
+		<Unit filename="tp1/ej2/tp1_ej2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tp1/ej2/tp1_ej2.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
