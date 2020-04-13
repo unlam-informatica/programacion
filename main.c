@@ -1,26 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <wchar.h>
 #include <locale.h>
-#include "tp1.h"
+#include "core/tp1.h"
 
-int main() {
+int main(int cargs, char **varg, char **vent) {
     // Seteamos locale para poder utilizar acentos directamente en printf
     setlocale(LC_ALL, "");
-    printf("=========================================\n");
-    printf("  Ejercicios Programación 1 - Guía 2020  \n");
-    printf("=========================================\n");
+    puts("=========================================");
+    puts("  Ejercicios Programación 1 - Guia 2020  ");
+    puts("=========================================");
 
     int tp = 0;
     int ej = 0;
     do {
-        printf("Selecciona el TP a ejecutar (0 para salir): ");
+        printf("Indica el TP a ejecutar (0 para salir): ");
         scanf("%d", &tp);
         if(tp != 0) {
             if(tp != 1 && tp != 2 && tp != 3) {
                 printf("\nEl número de TP no existe!\n\n");
             } else {
-                printf("\n******************* TP%d *******************\n", tp);
+                printf("\n>>>>> TP%d\n", tp);
                 printf("Indica el ejercicio a ejecutar: ");
                 scanf("%d", &ej);
                 fflush( stdin );

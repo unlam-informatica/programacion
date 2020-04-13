@@ -1,7 +1,10 @@
+#include <stdio.h>
+
 #include "tp1.h"
 #include "../tp1/ej1/tp1_ej1.h"
 #include "../tp1/ej2/tp1_ej2.h"
 #include "../tp1/ej3/tp1_ej3.h"
+#include "../tp1/ej14/tp1_ej14.h"
 
 void correr_ejercicio_tp1(int ej) {
     switch(ej) {
@@ -14,7 +17,10 @@ void correr_ejercicio_tp1(int ej) {
     case 3:
         tp1_ej3();
         break;
+    case 14:
+        tp1_ej14();
+        break;
     default:
-        printf("El número de ejercicio no existe o aún no fue implementado.");
+        printf("El nï¿½mero de ejercicio no existe o aï¿½n no fue implementado.");
     }
 }

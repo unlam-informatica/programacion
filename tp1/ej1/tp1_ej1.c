@@ -1,13 +1,14 @@
 #include <stdio.h>
+
 #include "tp1_ej1.h"
+#include "../../core/utils.h"
 #include "../../core/types.h"
 
 long solicitar_numero();
 bigint calcular_factorial(long num);
 
 bigint tp1_ej1() {
-    printf("**************** TP1 - EJ1 *******************\n");
-
+    imprimir_titulo("TP1 - EJ1");
     long num = solicitar_numero();
     long factorial = calcular_factorial(num);
     printf("Factorial de %ld: %ld\n", num, factorial);
