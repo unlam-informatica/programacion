@@ -1,10 +1,15 @@
 #include <stdio.h>
-#include "../ej1/tp1_ej1.h"
 #include "tp1_ej2.h"
+
+#include "../../core/utils.h"
+#include "../ej1/tp1_ej1.h"
+
 
 long calcular_combinatorio(int m, int n);
 
 long tp1_ej2() {
+    imprimir_titulo("TP1 - EJ2");
+
     int numerador;
     int denominador;
 
@@ -27,8 +32,9 @@ long tp1_ej2() {
         fflush(stdin);
     }
 
-    int combinatorio = calcular_combinatorio(numerador, denominador);
+    long combinatorio = calcular_combinatorio(numerador, denominador);
     printf("El combinatorio de %d y %d es %ld", numerador, denominador, combinatorio);
+    return combinatorio;
 }
 
 long calcular_combinatorio(int num, int den) {
