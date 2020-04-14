@@ -5,6 +5,7 @@
 #include "../tp1/ej2/tp1_ej2.h"
 #include "../tp1/ej3/tp1_ej3.h"
 #include "../tp1/ej14/tp1_ej14.h"
+#include "../tp1/ej15/tp1_ej15.h"
 
 void correr_ejercicio_tp1(int ej) {
     switch(ej) {
@@ -19,6 +20,9 @@ void correr_ejercicio_tp1(int ej) {
         break;
     case 14:
         tp1_ej14();
+        break;
+    case 15:
+        tp1_ej15();
         break;
     default:
         printf("El n�mero de ejercicio no existe o a�n no fue implementado.");
