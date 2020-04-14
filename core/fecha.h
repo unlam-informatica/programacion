@@ -11,4 +11,6 @@ int es_bisiesto(int anio);
 
 Fecha parsear_fecha(char *fecha);
 
+Fecha dia_siguiente(Fecha *fecha);
+
 #endif // FECHA_H_INCLUDED

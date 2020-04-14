@@ -12,8 +12,6 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-std=c++11" />
-					<Add option="-std=c17" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -53,6 +51,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tp1/ej14/tp1_ej14.h" />
+		<Unit filename="tp1/ej15/tp1_ej15.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tp1/ej15/tp1_ej15.h" />
 		<Unit filename="tp1/ej1/tp1_ej1.c">
 			<Option compilerVar="CC" />
 		</Unit>
