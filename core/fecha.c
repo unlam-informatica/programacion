@@ -23,8 +23,26 @@ Fecha dia_siguiente(Fecha *fecha) {
     return nueva_fecha;
 }
 
+Fecha sumar_dias(Fecha *fecha, int dias) {
+    Fecha nueva_fecha = {fecha->dia, fecha->mes, fecha->anio};
+    while(dias > 0) {
+        int dias_del_mes = dias_por_mes[es_bisiesto(nueva_fecha.anio)][nueva_fecha.mes];
+        if((nueva_fecha.dia + dias) > dias_del_mes) {
+            int diferencia_fin_mes = dias_del_mes - nueva_fecha.dia;
+            nueva_fecha.dia = dias_del_mes;
+            // Hacemos uso de la función día_siguiente para poder calcular automaticamente el mes y año siguiente.
+            nueva_fecha = dia_siguiente(&nueva_fecha);
+            dias = dias - diferencia_fin_mes - 1; // restamos 1 más debido al uso de la función dia_siguiente.
+        } else {
+            nueva_fecha.dia += dias;
+            dias -= dias;
+        }
+    }
+    return nueva_fecha;
+}
+
 Fecha parsear_fecha(char *fecha) {
     return (Fecha) {
-        .dia=1, .mes=1, .anio=1700
+        .dia=1, .mes=1, .anio=1600
     };
 }

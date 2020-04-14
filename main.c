@@ -20,7 +20,7 @@ int main(int cargs, char **varg, char **vent) {
                 printf("\nEl número de TP no existe!\n\n");
             } else {
                 printf("\n>>>>> TP%d\n", tp);
-                printf("Indica el ejercicio a ejecutar: ");
+                printf("> Indica el ejercicio a ejecutar: ");
                 scanf("%d", &ej);
                 fflush( stdin );
                 switch(tp) {

@@ -13,4 +13,6 @@ Fecha parsear_fecha(char *fecha);
 
 Fecha dia_siguiente(Fecha *fecha);
 
+Fecha sumar_dias(Fecha *fecha, int dias_a_sumar);
+
 #endif // FECHA_H_INCLUDED
