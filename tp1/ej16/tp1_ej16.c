@@ -4,6 +4,7 @@
 #include "../../core/fecha.h"
 #include "../../core/utils.h"
 
+// Desarrollar una función que a partir de una fecha obtenga la que resulte de sumarle N días.
 int tp1_ej16() {
     imprimir_titulo("TP1 - EJ16");
 
@@ -21,7 +22,9 @@ int tp1_ej16() {
         printf("> Ingresa la fecha de inicio: (formato DD-MM-AAAA): ");
         scanf("%d-%d-%d", &dia, &mes, &anio);
         fflush(stdin);
-        fecha = (Fecha){dia, mes, anio};
+        fecha = (Fecha) {
+            dia, mes, anio
+        };
     }
     while(dias_a_sumar < 0) {
         puts("Los días a sumar deben ser un número positivo");

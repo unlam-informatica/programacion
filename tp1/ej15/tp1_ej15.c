@@ -3,6 +3,7 @@
 #include "../../core/utils.h"
 #include "../../core/fecha.h"
 
+// Desarrollar una función que a partir de una fecha obtenga la correspondiente al día siguiente.
 int tp1_ej15() {
     imprimir_titulo("TP1 - EJ15");
 
