@@ -17,13 +17,16 @@ int es_fecha_valida(Fecha *fecha) {
 }
 
 /**
-    Valida si el año es bisiesto.
-    Retorna 1 si el año es bisiesto, de lo contrario retorna 0;
-*/
+ * Valida si el año es bisiesto.
+ * Retorna 1 si el año es bisiesto, de lo contrario retorna 0;
+ */
 int es_bisiesto(int anio) {
     return (anio % 400 == 0 || (anio % 4 == 0 && anio % 100 != 0)) ? 1 : 0;
 }
 
+/**
+ * Calcula el día siguiente a la fecha indicada.
+ */
 Fecha dia_siguiente(Fecha *fecha) {
     int bisiesto = es_bisiesto(fecha->anio);
 
@@ -74,7 +77,7 @@ Fecha restar_dias(Fecha *f1, int dias) {
 //            dias -= dias;
 //        }
 //    }
-    return -1;
+    return (Fecha){1, 2, 1991};
 }
 
 /**
