@@ -3,7 +3,6 @@
 #include <locale.h>
 
 #include "core/tp1.h"
-#include "tp1/ej18/tp1_ej18.h"
 
 int main(int cargs, char **varg, char **vent) {
     // Seteamos locale para poder utilizar acentos directamente en printf
@@ -33,8 +32,8 @@ int main(int cargs, char **varg, char **vent) {
                     printf("El número de TP no existe.");
                 }
             }
+            printf("\n**************************************************\n");
         }
-        printf("\n**************************************************\n");
     } while(tp != 0);
     return 0;
 }
