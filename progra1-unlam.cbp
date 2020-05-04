@@ -35,10 +35,18 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="core/fecha.h" />
+		<Unit filename="core/menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="core/menu.h" />
 		<Unit filename="core/tp1.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="core/tp1.h" />
+		<Unit filename="core/tp2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="core/tp2.h" />
 		<Unit filename="core/types.h" />
 		<Unit filename="core/utils.c">
 			<Option compilerVar="CC" />
@@ -71,6 +79,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tp1/ej1/tp1_ej1.h" />
+		<Unit filename="tp1/ej22/tp1_ej22.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tp1/ej22/tp1_ej22.h" />
 		<Unit filename="tp1/ej2/tp1_ej2.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -83,6 +95,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tp1/ej4/tp1_ej4.h" />
+		<Unit filename="tp2/ej1/tp2_ej1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tp2/ej1/tp2_ej1.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
