@@ -1,6 +1,8 @@
 
-# Created by https://www.gitignore.io/api/c,codeblocks
-# Edit at https://www.gitignore.io/?templates=c,codeblocks
+### Archivos binarios y de texto generados en los ejercicios ###
+tp**/*.txt
+tp**/*.bin
+tp**/*.dat
 
 ### C ###
 # Prerequisites

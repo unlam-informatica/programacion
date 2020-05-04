@@ -3,6 +3,8 @@
 #include <locale.h>
 
 #include "core/tp1.h"
+#include "core/tp2.h"
+#include "tp2/ej1/tp2_ej1.h"
 
 int main(int cargs, char **varg, char **vent) {
     // Seteamos locale para poder utilizar acentos directamente en printf
@@ -15,6 +17,7 @@ int main(int cargs, char **varg, char **vent) {
     int ej = 0;
     do {
         printf("Indica el TP a ejecutar (0 para salir): ");
+        fflush(stdin);
         scanf("%d", &tp);
         if(tp != 0) {
             if(tp != 1 && tp != 2 && tp != 3) {
@@ -27,6 +30,9 @@ int main(int cargs, char **varg, char **vent) {
                 switch(tp) {
                 case 1:
                     correr_ejercicio_tp1(ej);
+                    break;
+                case 2:
+                    correr_ejercicio_tp2(ej);
                     break;
                 default:
                     printf("El número de TP no existe.");
