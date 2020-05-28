@@ -74,6 +74,11 @@ La variable `origin` puede tener uno de los siguientes valores:
 ##### `int fclose( FILE *stream);`
 Cierra un archivo y desasocia el stream. Todo el contenido que se encuentre en el stream, es grabado al archivo antes de cerrarlo.
 
+##### Eliminar archivo
+##### `int remove(const char *filename );`
+Elimina el archivo en la dirección indicada por `filename`. Generalmente, la dirección es relativa a la carpeta base del proyecto.
+
+
 #### Archivos binarios
 
 ##### Lectura
@@ -134,3 +139,66 @@ Tenemos dos formas de orgnizar los archivos de texto: campos de longitud variabl
 01111111Persona Uno                           C01012001111000.10
 ```
 
+## Metodos de ordenamiento
+### Metodo de burbujeo
+
+```c
+void ordenar_burbujeo(int * v, int cant_elem) {
+  int i = 1, j;
+  int huboIntercambios = 1;
+  while (huboIntercambios && i < cant_elem) {
+    huboIntercambios = 0;
+    for (j = 0; j < cant_elem– i; j++) {
+      if (v[j] > v[j + 1]) {
+        intercambiar( & v[j], & v[j + 1]);
+        huboIntercambios = 1;
+      }
+    }
+    i++;
+  }
+}
+``` 
+
+### Metodo de selección
+```c
+void ordenar_seleccion(int *v, int cant_elem) {
+  int m;
+  for (int i = 0; i < cant_elem - 1; i++) {
+    m = buscar_menor(v, i, cant_elem - 1);
+    if (m != i)
+      intercambiar( & v[m], & v[i]);
+  }
+}
+
+int buscar_menor(int * v, int desde, int hasta) {
+  int m = desde;
+  for (int j = desde + 1; j <= hasta; j++) {
+    if (v[j] < v[m])
+      m = j;
+  }
+  return m;
+}
+```
+
+### Metodo de inserción
+Se presupone que el array donde se van a insertan los elementos esta ordenado. Cada elemento a insertar se inserta en la posición que le corresponde según su orden.
+```c
+void ordena_insercion(int * v, int cant_elem) {
+  int j;
+  int elemento_a_insertar;
+  for (int i = 1; i < cant_elem; i++) {
+    elemento_a_insertar = v[i];
+    j = i - 1;
+    while (j >= 0 && elemento_a_insertar < v[j]) {
+      v[j + 1] = v[j];
+      j--;
+    }
+    v[j + 1] = elemento_a_insertar;
+  }
+}
+```
+
+
+## Otras notas
+`sizeof(array)`
+retorna el tamaño en bytes del array referenciado.
