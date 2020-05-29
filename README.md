@@ -5,6 +5,7 @@
     + [`sprintf` - Escritura formateada](#sprintf---escritura-formateada)
     + [`sscanf` - Lectura formateada](#sscanf---lectura-formateada)
     + [`strrchr` - Buscar último caracter en una cadena](#strrchr---buscar-ultimo-caracter-en-una-cadena)
+    + [`strncpy` - Copiar n caracteres de una cadena a otra](#strncpy---copiar-n-caracteres-de-una-cadena-a-otra)
   * [Archivos](#archivos)
       - [`fopen` - Abrir archivo](#fopen---abrir-archivo)
       - [`rewind` - Volver al inicio de archivo](#rewind---volver-al-inicio-de-archivo)
@@ -30,6 +31,7 @@
     + [Metodo de inserción](#metodo-de-insercion)
   * [Otras notas](#otras-notas)
     + [Intercambiar dos variables de cualquier tipo](#intercambiar-dos-variables-de-cualquier-tipo)
+
 
 ## Cadenas
 Especificadores de formato de para `printf`, `sprintf`, `fprintf`
@@ -72,6 +74,16 @@ char *strrchr(char *str, int character);
 Retorna un puntero a la última ocurrencia de `character` en la cadena `str`.
 
 El caracter de fin de cadena `\0` tambien se considera parte de la cadena por lo que se puede utilizar esta funcion para obtener un puntero al final de la cadena.
+
+### `strncpy` - Copiar n caracteres de una cadena a otra
+```c
+char *strncpy(char *destination, const char *source, size_t n);
+```
+Copia los primeros `n` caracteres de `source` en `destination`.
+
+Si se halla el final de linea en source antes de leer `n` caracteres, la cadena de destino se completa con ceros hasta un total de `n` caracteres.
+
+**Cuidado!**: Si la cadena origen es mas larga que la cadena destino, al finalizar la copia de las cadenas no se añade el terminador de linea `\0`.
 
 ## Archivos
 
@@ -222,14 +234,20 @@ Copia la cadena de caracteres apuntada por `str` hasta encontrar el caracter de 
 ### Organización de los datos en archivos de texto
 Tenemos dos formas de orgnizar los archivos de texto: campos de longitud variable y campos de longitud fija. Al decir campos nos referimos a las diferentes unidades de datos que completan cada registro o fila del archivo.
 
-**Campos de longitud variable:** Se define un caracter que separa cada uno de los campos del registro. Por ejemplo utilizando `|` como separador de campos:
+#### Campos de longitud variable
+Se define un caracter que separa cada uno de los campos del registro. Por ejemplo utilizando `|` como separador de campos:
+
 ```text
 44444444|Persona Cuatro|A|1/4/2004|44000.44 
 22222222|Persona Dos|B|1/2/2002|22000.25
 33333333|Persona Tres|B|1/3/2003|33000.32
 ```
 
-**Campos de longitud fija:** La longitud de cada campo se define de antemano y se respeta para todos los registros aunque sobre espacio sin utilizar. Por ejemplo si se define el campo `nombre` con 30 caracteres y un campo definido ocupa 14, se rellena con espacios al final.
+**código:** [txt_longitud_variable](https://gist.github.com/marcos-rios/edc48c8d4138ba18fb450694b9d5a55e)
+
+#### Campos de longitud fija
+La longitud de cada campo se define de antemano y se respeta para todos los registros aunque sobre espacio sin utilizar. Por ejemplo si se define el campo `nombre` con 30 caracteres y un campo definido ocupa 14, se rellena con espacios al final.
+
 ```
 44444444Persona Cuatro                        A01042004 44000.44
 22222222Persona Dos 						  B01022002 22000.25
@@ -237,6 +255,7 @@ Tenemos dos formas de orgnizar los archivos de texto: campos de longitud variabl
 55555555Persona Cinco                         A01052005 55000.50
 01111111Persona Uno                           C01012001111000.10
 ```
+
 ### Notas sobre archivos
 Si realizo un cambio de operación, por ejemplo realizo un `fwrite` y luego quiero realizar un `fread`, entre las dos operaciones, tengo que realizar un `fseek` para que se posicione correctamente el indicador de posición. Por ejemplo:
 
