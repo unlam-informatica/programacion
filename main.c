@@ -4,7 +4,6 @@
 
 #include "core/tp1.h"
 #include "core/tp2.h"
-#include "tp2/ej1/tp2_ej1.h"
 
 int main(int cargs, char **varg, char **vent) {
     // Seteamos locale para poder utilizar acentos directamente en printf

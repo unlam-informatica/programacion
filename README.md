@@ -1,29 +1,83 @@
-# Programación 2020 - UNLaM
-## Notas personales
 
-### Cadenas
-##### Escritura formateada `sprintf`
-##### `int sprintf(char * str, const char * format, ...);`
+- [Programación 2020 - UNLaM](#programacion-2020---unlam)
+  * [Cadenas](#cadenas)
+    + [`sprintf` - Escritura formateada](#sprintf---escritura-formateada)
+    + [`sscanf` - Lectura formateada](#sscanf---lectura-formateada)
+    + [`strrchr` - Buscar caracter](#strrchr---buscar-caracter)
+  * [Archivos](#archivos)
+      - [`fopen` - Abrir archivo](#fopen---abrir-archivo)
+      - [`rewind` - Volver al inicio de archivo](#rewind---volver-al-inicio-de-archivo)
+      - [`feof` - Validación de fin de archivo](#feof---validacion-de-fin-de-archivo)
+      - [`ftell` - Obtener posición actual](#ftell---obtener-posicion-actual)
+      - [`fseek` - Reposicionarse en el archivo](#fseek---reposicionarse-en-el-archivo)
+      - [`fclose` - Cerrar archivo](#fclose---cerrar-archivo)
+      - [`remove` - Eliminar archivo](#remove---eliminar-archivo)
+    + [Archivos binarios](#archivos-binarios)
+      - [`fread` - Lectura](#fread---lectura)
+      - [`fwrite` - Escritura](#fwrite---escritura)
+    + [Archivos de texto](#archivos-de-texto)
+      - [`fgets` - Lectura de archivo a string](#fgets---lectura-de-archivo-a-string)
+      - [`fscanf` - Lectura de archivo a variables](#fscanf---lectura-de-archivo-a-variables)
+      - [`fprintf` - Escritura de string con variables](#fprintf---escritura-de-string-con-variables)
+      - [`fputs` - Escritura de string sin variables](#fputs---escritura-de-string-sin-variables)
+    + [Organización de los datos en archivos de texto](#organizacion-de-los-datos-en-archivos-de-texto)
+  * [Metodos de ordenamiento](#metodos-de-ordenamiento)
+    + [Metodo de burbujeo](#metodo-de-burbujeo)
+    + [Metodo de selección](#metodo-de-seleccion)
+    + [Metodo de inserción](#metodo-de-insercion)
+  * [Otras notas](#otras-notas)
+    + [Intercambiar dos variables de cualquier tipo](#intercambiar-dos-variables-de-cualquier-tipo)
+
+# Programación 2020 - UNLaM
+
+## Cadenas
+Especificadores de formato de para `printf`, `sprintf`, `fprintf`
+
+```
+%[flags][width][.precision][length]specifier
+```
+
+- `[flags]`: Alinea texto a la izquierda con el parametro indicado. Se utiliza `-` para alinear texto a la izquierda y `0` para completar el numero con `0` a la izquierda. En caso de no querer alinear a izquierda, no lleva nada.
+- `[width]`: tamaño de campo en que se muestra la cadena. Si es mayor que el tamaño de la cadena quedará alineado a derecha, salvo que esté indicado `[flags]` como `-`.
+- `[.precision]`: máxima cantidad de caracteres a mostrar.
+Los dos enteros para tamaño de campo y la cantidad máxima son opcionales e independientes entre sí. Se pueden reemplazar en la cadena de conversión de formato por (\*), con lo que deberá haber una constante literal entera o una variable entera, por cada asterisco que se indique, como argumentos para el printf.
+- `specifier`: Especificador del tipo de datos como ser `d`, `x`, `c`, `s`
+
+ver http://www.cplusplus.com/reference/cstdio/printf/ para mas detalles.
+
+### `sprintf` - Escritura formateada
+```c
+int sprintf(char * str, const char * format, ...);
+```
 Cumple la misma funcion que `printf` (se utiliza de la misma manera), pero en vez de imprimir en pantalla, copia el texto de salida a la variable `str`.
 
 `str` debe ser capaz de almacenar la cadena resultante.
 
 Al final de la cadena, se añade un caracter de terminación `\0`.
 
-##### Lectura formateada `sscanf`
-##### `int sscanf(const char *s, const char *format, ...);`
+### `sscanf` - Lectura formateada
+```c
+int sscanf(const char *s, const char *format, ...);
+```
 Cumple la misma funcion que `scanf` (se utiliza de la misma manera), pero en vez de obtener los valores por teclado, los obtiene a partir de `s`.
 
 Lee valores de la cadena `s` y los guarda en cada una de las variables referenciadas por format.
 
-##### `char *strrchr(char *str, int character);`
+
+### `strrchr` - Buscar último caracter en una cadena
+```c
+char *strrchr(char *str, int character);
+```
 Retorna un puntero a la última ocurrencia de `character` en la cadena `str`.
 
 El caracter de fin de cadena `\0` tambien se considera parte de la cadena por lo que se puede utilizar esta funcion para obtener un puntero al final de la cadena.
 
-### Archivos
-##### Abrir archivo
-##### `FILE * fopen (const char *filename, const char *mode);`
+## Archivos
+
+#### `fopen` - Abrir archivo
+```c
+FILE * fopen(const char *filename, const char *mode);
+```
 
 > **filename:** Nombre del archivo a abrir.
 > 
@@ -40,26 +94,47 @@ El caracter de fin de cadena `\0` tambien se considera parte de la cadena por lo
 
 Los especificadores de modo por defecto abren los archivos como archivos de texto sin embargo es buena practica especificar el tipo de archivo. Los dos tipos de archivos disponibles son texto `"t"` y binario `"b"`. La `"t"` y `"b"` se pueden añadir después o antes del `+`. Por ejemplo `"r+b"` y `"rb+"` son válidos.
 
-##### Volver al inicio de archivo
-##### `void rewind (FILE * stream );`
+#### `rewind` - Volver al inicio de archivo
+#### 
+```c
+void rewind(FILE * stream );
+```
+
 Vuelve el indicador de posición al inicio del archivo referenciado por `stream`.
 
-##### Validación de fin de archivo
-##### `int feof (FILE *stream);`
+#### `feof` - Validación de fin de archivo
+```c
+int feof(FILE *stream);
+```
 Retorna un valor distinto de cero si el indicador de fin de archivo asociado con el stream es verdadero.
 
 Este indicador generalmente se setea mediante una operación previa como `fread` y `fwrite`.
 
-##### Obtener posición actual
-##### `long int ftell(FILE *stream);`
+`feof(FILE *stream);` retorna fin de archivo una vez que realizo un intento de lectura fallido. Por lo que primero tengo que realizar una lectura inicial y luego verificar por fin de archivo. Por ejemplo:
+```c
+FILE *pf = fopen("archivo.bin", "rb");
+fread(&num, sizeof(int), 1, pf);
+while(!feof(pf)){
+	printf("%d\n", num);
+	fread(&num, sizeof(int), 1, pf);
+}
+fclose(pf);
+```
+
+#### `ftell` - Obtener posición actual
+```c
+long int ftell(FILE *stream);
+```
 Retorna el valor actual del indicador de posición para el archivo apuntado por `stream`.
 
 Para archivos binarios, el valor retornado indica la cantida de bytes de desplazamiento desde el inicio del archivo.
 
 Para archivos de texto no es representativo pero puede usarse como referencia para luego utilizar `fseek` y volver al mismo punto.
 
-##### Reposicionarse en el archivo
-##### `int fseek(FILE * stream, long int offset, int origin);`
+#### `fseek` - Reposicionarse en el archivo
+```c
+int fseek(FILE *stream, long int offset, int origin);
+```
 Setea el indicado de posición del archivo referenciado por `stream` a la posición indicada mediante un desplazamiento `offset` a partir de un punto de partida `origin`.
 
 La variable `origin` puede tener uno de los siguientes valores:
@@ -70,57 +145,80 @@ La variable `origin` puede tener uno de los siguientes valores:
 |SEEK_CUR|Posición actual del puntero `stream`|
 |SEEK_END|Fin del archivo|
 
-##### Cerrar archivo
-##### `int fclose( FILE *stream);`
+#### `fclose` - Cerrar archivo
+```c
+int fclose( FILE *stream);
+```
 Cierra un archivo y desasocia el stream. Todo el contenido que se encuentre en el stream, es grabado al archivo antes de cerrarlo.
 
-##### Eliminar archivo
-##### `int remove(const char *filename );`
+#### `remove` - Eliminar archivo
+```c
+int remove(const char *filename );
+```
 Elimina el archivo en la dirección indicada por `filename`. Generalmente, la dirección es relativa a la carpeta base del proyecto.
 
 
-#### Archivos binarios
+### Archivos binarios
+#### `fread` - Lectura
+```c
+size_t fread(void *ptr, size_t size, size_t count, FILE *stream);
+```
 
-##### Lectura
-##### `size_t fread(void *ptr, size_t size, size_t count, FILE *stream);`
-> **ptr:** Puntero a una variable donde serán escritos los datos leídos del archivo.
-> 
-> **size:** Cantidad de bytes a leer del archivo.
-> 
-> **count:** Cantidad de elementos de tamaño `size` que se deben a leer.
-> 
-> **stream:** Puntero al archivo.
+- `ptr`: Puntero a una variable donde serán escritos los datos leídos del archivo. 
+
+- `size`: Cantidad de bytes a leer del archivo.
+
+- `count`: Cantidad de elementos de tamaño `size` que se deben a leer.
+
+- `stream`: Puntero al archivo.
 
 La posición del puntero avanza la cantidad de bytes indicadas por `fread`.
 
-##### Escritura
-##### `size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);`
+#### `fwrite` - Escritura
+```c
+size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);
+```
 
-> **ptr:** Puntero a una variable de donde serán leídos los datos a escribir al archivo.
-> 
-> **size:** Cantidad de bytes a escribir en el archivo.
-> 
-> **count:** Cantidad de elementos de tamaño `size` que se deben a escribir.
-> 
-> **stream:** Puntero al archivo.
+- `ptr`: Puntero a una variable de donde serán leídos los datos a escribir al archivo.
 
-#### Archivos de texto
+- `size`: Cantidad de bytes a escribir en el archivo.
 
-##### Lectura
-##### `char *fgets(char *str, int num, FILE *stream);`
+- `count`: Cantidad de elementos de tamaño `size` que se deben a escribir.
+
+- `stream`: Puntero al archivo.
+
+### Archivos de texto
+#### `fgets` - Lectura de archivo a string
+```c
+char* fgets(char *str, int num, FILE *stream);
+```
 Lee caracteres del archivo y los copia a `str` hasta que se hayan leído `num - 1` caracteres o se encuentre un caracter de fin de linea `\n` o fin de archivo `\0`. Añade el caracter `\0` a continuación del ultimo caracter copiado.
 
-##### `int fscanf(FILE *stream, const char *format, ...);`
+#### `fscanf` - Lectura de archivo a variables
+```c
+int fscanf(FILE *stream, const char *format, ...);
+```
 Permite realizar la lectura desde el archivo de texto apuntado por `stream` de acuerdo al formato especificado en `format` y asigna los valores a las variables especificadas.
 
-##### Escritura
-##### `int fprintf(FILE *stream, const char *format, ... );`
-Escribe en el archivo apuntaod por `stream` la cadena de caracteres apuntada por `format`. La cadena indicada en `format` pueden incluir _especificadores de formato_ de la misma manera que utilizando `printf`.
+#### `fprintf` - Escritura de string con variables
+```c
+int fprintf(FILE *stream, const char *format, ... );
+```
+Escribe en el archivo apuntado por `stream` la cadena de caracteres apuntada por `format`. La cadena indicada en `format` pueden incluir _especificadores de formato_ de la misma manera que utilizando `printf`.
 
-##### `int fputs(const char *str, FILE *stream);`
+#### `fputc` - Escritura de string sin variables
+```c
+int fputc(int character, FILE *stream);
+```
+Copia el caracter `character` al archivo apuntado por `stream` y avanza una posición.
+
+#### `fputs` - Escritura de string sin variables
+```c
+int fputs(const char *str, FILE *stream);
+```
 Copia la cadena de caracteres apuntada por `str` hasta encontrar el caracter de fin de texto `\0` al archivo apuntado por `stream`. El caracter de finalización `\0` no es copiado.
 
-#### Organización de los datos en archivos de texto
+### Organización de los datos en archivos de texto
 Tenemos dos formas de orgnizar los archivos de texto: campos de longitud variable y campos de longitud fija. Al decir campos nos referimos a las diferentes unidades de datos que completan cada registro o fila del archivo.
 
 **Campos de longitud variable:** Se define un caracter que separa cada uno de los campos del registro. Por ejemplo utilizando `|` como separador de campos:
@@ -198,7 +296,52 @@ void ordena_insercion(int * v, int cant_elem) {
 }
 ```
 
-
 ## Otras notas
-`sizeof(array)`
-retorna el tamaño en bytes del array referenciado.
+
+> `sizeof(array)` retorna el tamaño en bytes del array referenciado.
+
+> `switch` acepta strings como parametro
+
+```c
+/**
+	Inicialización y uso de srand
+*/
+#include <stdio.h>      /* printf, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
+srand (time(NULL));
+printf("Numero aleatorio: %d\n", rand() % 100);
+```
+
+Para definir una función que recibe otra funcion por parametro, tengo que definirla de la siguiente manera:
+```c
+/**
+	defino un tipo de dato que apunta a una función.
+	Define el mismo tipo de dato para los parametros que cmp.
+*/
+typedef int (*Cmp)(const void *v1, const void *v2);
+/**
+	Compara v1 y v2. Retorna un numero negativo si v1 es menor a v2.
+*/
+
+int cmp(const void *v1, const void *v2);
+
+
+/**
+	Recibe una función de comparación por parametro.
+*/
+void buscar_menor(int desde, int hasta, Cmp cmp);
+```
+
+### Intercambiar dos variables de cualquier tipo
+```c
+#include <string.h>
+
+void intercambiar(void *a, void *b, size_t tam){
+	char aux[tam];
+	memcpy(aux, a, tam);
+	memcpy(a, b, tam);
+	memcpy(b, aux, tam);
+}
+```
