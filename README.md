@@ -1,9 +1,10 @@
+# Programación 2020 - UNLaM
 
 - [Programación 2020 - UNLaM](#programacion-2020---unlam)
   * [Cadenas](#cadenas)
     + [`sprintf` - Escritura formateada](#sprintf---escritura-formateada)
     + [`sscanf` - Lectura formateada](#sscanf---lectura-formateada)
-    + [`strrchr` - Buscar caracter](#strrchr---buscar-caracter)
+    + [`strrchr` - Buscar último caracter en una cadena](#strrchr---buscar-ultimo-caracter-en-una-cadena)
   * [Archivos](#archivos)
       - [`fopen` - Abrir archivo](#fopen---abrir-archivo)
       - [`rewind` - Volver al inicio de archivo](#rewind---volver-al-inicio-de-archivo)
@@ -19,16 +20,16 @@
       - [`fgets` - Lectura de archivo a string](#fgets---lectura-de-archivo-a-string)
       - [`fscanf` - Lectura de archivo a variables](#fscanf---lectura-de-archivo-a-variables)
       - [`fprintf` - Escritura de string con variables](#fprintf---escritura-de-string-con-variables)
+      - [`fputc` - Escritura de string sin variables](#fputc---escritura-de-string-sin-variables)
       - [`fputs` - Escritura de string sin variables](#fputs---escritura-de-string-sin-variables)
     + [Organización de los datos en archivos de texto](#organizacion-de-los-datos-en-archivos-de-texto)
+    + [Notas sobre archivos](#notas-sobre-archivos)
   * [Metodos de ordenamiento](#metodos-de-ordenamiento)
     + [Metodo de burbujeo](#metodo-de-burbujeo)
     + [Metodo de selección](#metodo-de-seleccion)
     + [Metodo de inserción](#metodo-de-insercion)
   * [Otras notas](#otras-notas)
     + [Intercambiar dos variables de cualquier tipo](#intercambiar-dos-variables-de-cualquier-tipo)
-
-# Programación 2020 - UNLaM
 
 ## Cadenas
 Especificadores de formato de para `printf`, `sprintf`, `fprintf`
@@ -79,9 +80,9 @@ El caracter de fin de cadena `\0` tambien se considera parte de la cadena por lo
 FILE * fopen(const char *filename, const char *mode);
 ```
 
-> **filename:** Nombre del archivo a abrir.
-> 
-> **mode:** Modo de apertura.
+* `filename`: Nombre del archivo a abrir.
+ 
+* `mode:` Modo de apertura.
 
 | Modo de acceso | Descripción |
 | :------------: | ----------- |
@@ -92,7 +93,7 @@ FILE * fopen(const char *filename, const char *mode);
 | "w+" | Crea un archivo para lectura y escritura. El puntero se ubica al inicio del archivo. Si el archivo ya existe lo pisa y crea uno nuevo vacío. |
 | "a+" | Abre un archivo para lectura y escritura. El puntero se ubica al final del archivo. Si el archivo no existe, lo crea. Las operaciones de reposicionamiento (`fseek`, `fsetpos`, `rewind`) afectan a la siguiente operación de lectura, pero las operaciones de escritura, mueven la posición del puntero de vuelta al final del archivo.
 
-Los especificadores de modo por defecto abren los archivos como archivos de texto sin embargo es buena practica especificar el tipo de archivo. Los dos tipos de archivos disponibles son texto `"t"` y binario `"b"`. La `"t"` y `"b"` se pueden añadir después o antes del `+`. Por ejemplo `"r+b"` y `"rb+"` son válidos.
+Los especificadores de modo por defecto abren los archivos como archivos de texto sin embargo es buena practica especificar el tipo de archivo. Los dos tipos de archivos disponibles son texto `"t"` y binario `"b"`. La `"t"` y `"b"` se pueden añadir antes o después del `+`. Por ejemplo `"rbb"` y `"r+b"` son válidos.
 
 #### `rewind` - Volver al inicio de archivo
 #### 
