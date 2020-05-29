@@ -236,6 +236,16 @@ Tenemos dos formas de orgnizar los archivos de texto: campos de longitud variabl
 55555555Persona Cinco                         A01052005 55000.50
 01111111Persona Uno                           C01012001111000.10
 ```
+### Notas sobre archivos
+Si realizo un cambio de operación, por ejemplo realizo un `fwrite` y luego quiero realizar un `fread`, entre las dos operaciones, tengo que realizar un `fseek` para que se posicione correctamente el indicador de posición. Por ejemplo:
+
+```c
+fread(pf, sizeof(int), 1, &num);
+fseek(pf, -sizeof(num), SEEK_CUR);
+fwrite(pf, sizeof(int), 1, &num);
+fseek(pf, 0L, SEEK_CUR);
+fread(pf, sizeof(int), 1, &num);
+```
 
 ## Metodos de ordenamiento
 ### Metodo de burbujeo
