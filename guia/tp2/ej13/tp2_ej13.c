@@ -31,7 +31,7 @@ void actualizar_empleados();
 void mostrar_empleados();
 
 int tp2_ej13() {
-//    crear_archivos();
+    crear_archivos();
     actualizar_empleados();
     mostrar_empleados();
 

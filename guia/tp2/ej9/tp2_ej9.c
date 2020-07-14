@@ -9,7 +9,7 @@ void tp2_ej9() {
     char linea_7 = 0; //cantidad de lineas con 7 elemento
     puts("Ingrese los valores enteros a grabar en el archivo. (S para salir)");
     srand(time(NULL));
-    FILE *pf = fopen("tp1_ej9.txt", "wt");
+    FILE *pf = fopen("tp2/ej9/tp1_ej9.txt", "wt");
     int i = 0;
     do {
         int cant_linea = rand() % 7 + 1;

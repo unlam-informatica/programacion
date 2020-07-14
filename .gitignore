@@ -63,6 +63,7 @@ dkms.conf
 *.layout
 *.depend
 *.save
+*.cbp
 # generated directories
 bin/
 obj/

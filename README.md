@@ -4,6 +4,7 @@
   * [Cadenas](#cadenas)
     + [`sprintf` - Escritura formateada](#sprintf---escritura-formateada)
     + [`sscanf` - Lectura formateada](#sscanf---lectura-formateada)
+    + [`strcmp` - Comparar dos cadenas](#strcmp---comparar-dos-cadenas)
     + [`strrchr` - Buscar último caracter en una cadena](#strrchr---buscar-ultimo-caracter-en-una-cadena)
     + [`strncpy` - Copiar n caracteres de una cadena a otra](#strncpy---copiar-n-caracteres-de-una-cadena-a-otra)
   * [Archivos](#archivos)
@@ -24,13 +25,18 @@
       - [`fputc` - Escritura de string sin variables](#fputc---escritura-de-string-sin-variables)
       - [`fputs` - Escritura de string sin variables](#fputs---escritura-de-string-sin-variables)
     + [Organización de los datos en archivos de texto](#organizacion-de-los-datos-en-archivos-de-texto)
+      - [Campos de longitud variable](#campos-de-longitud-variable)
+      - [Campos de longitud fija](#campos-de-longitud-fija)
     + [Notas sobre archivos](#notas-sobre-archivos)
   * [Metodos de ordenamiento](#metodos-de-ordenamiento)
     + [Metodo de burbujeo](#metodo-de-burbujeo)
     + [Metodo de selección](#metodo-de-seleccion)
     + [Metodo de inserción](#metodo-de-insercion)
   * [Otras notas](#otras-notas)
+      - [Uso de `srand`](#uso-de-srand)
+      - [Como definir una función que acepta otra por parámetro](#como-definir-una-funcion-que-acepta-otra-por-parametro)
     + [Intercambiar dos variables de cualquier tipo](#intercambiar-dos-variables-de-cualquier-tipo)
+
 
 
 ## Cadenas
@@ -66,6 +72,15 @@ Cumple la misma funcion que `scanf` (se utiliza de la misma manera), pero en vez
 
 Lee valores de la cadena `s` y los guarda en cada una de las variables referenciadas por format.
 
+### `strcmp` - Comparar dos cadenas
+```c
+int strcmp ( const char * str1, const char * str2 );
+```
+Compara `str1` con `str2` y retorna:
+
+* `<0` str es menor que str2
+* `0`  si son iguales
+* `>0` str es menor que str2
 
 ### `strrchr` - Buscar último caracter en una cadena
 ```c
@@ -148,7 +163,7 @@ Para archivos de texto no es representativo pero puede usarse como referencia pa
 ```c
 int fseek(FILE *stream, long int offset, int origin);
 ```
-Setea el indicado de posición del archivo referenciado por `stream` a la posición indicada mediante un desplazamiento `offset` a partir de un punto de partida `origin`.
+Setea el indicador de posición del archivo referenciado por `stream` a la posición indicada mediante un desplazamiento `offset` a partir de un punto de partida `origin`.
 
 La variable `origin` puede tener uno de los siguientes valores:
 
@@ -162,7 +177,7 @@ La variable `origin` puede tener uno de los siguientes valores:
 ```c
 int fclose( FILE *stream);
 ```
-Cierra un archivo y desasocia el stream. Todo el contenido que se encuentre en el stream, es grabado al archivo antes de cerrarlo.
+Cierra un archivo y desasocia el stream. Todo el contenido que se encuentre en el stream es grabado al archivo antes de cerrarlo.
 
 #### `remove` - Eliminar archivo
 ```c
@@ -250,11 +265,14 @@ La longitud de cada campo se define de antemano y se respeta para todos los regi
 
 ```
 44444444Persona Cuatro                        A01042004 44000.44
-22222222Persona Dos 						  B01022002 22000.25
+22222222Persona Dos                           B01022002 22000.25
 33333333Persona Tres                          B01032003 33000.32
-55555555Persona Cinco                         A01052005 55000.50
+55555555Persona Cinco mil treinta y dos       A01052005 55000.50
 01111111Persona Uno                           C01012001111000.10
 ```
+
+Cuando pase de txt fijo a binario, tengo que eliminar los espacios que tengo de más al asignarlo a la variable usando `strtrim`
+**Nota:** Una de los beneficios de los archivos de longitud fija es que, si estan ordenados, puedo realizar una búsqueda binaria dentro del mismo archivo ya que cada uno de los registros siempre va a ocupar el mismo numero de bytes. La desventaja es que obviamente, ocupa más espacio.
 
 ### Notas sobre archivos
 Si realizo un cambio de operación, por ejemplo realizo un `fwrite` y luego quiero realizar un `fread`, entre las dos operaciones, tengo que realizar un `fseek` para que se posicione correctamente el indicador de posición. Por ejemplo:
@@ -328,10 +346,11 @@ void ordena_insercion(int * v, int cant_elem) {
 
 ## Otras notas
 
-> `sizeof(array)` retorna el tamaño en bytes del array referenciado.
+`sizeof(array)` retorna el tamaño en bytes del array referenciado.
 
-> `switch` acepta strings como parametro
+`switch` acepta strings como parametro
 
+#### Uso de `srand`
 ```c
 /**
 	Inicialización y uso de srand
@@ -344,6 +363,7 @@ srand (time(NULL));
 printf("Numero aleatorio: %d\n", rand() % 100);
 ```
 
+#### Como definir una función que acepta otra por parámetro
 Para definir una función que recibe otra funcion por parametro, tengo que definirla de la siguiente manera:
 ```c
 /**
