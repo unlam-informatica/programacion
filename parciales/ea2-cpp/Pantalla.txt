@@ -1,0 +1,13 @@
+Hello world!
+
+Valores inicales
+esperado 1x1x1-Incoloro - pri0:1x1x1-Incoloro
+esperado 3x2x1-Azul - pri1:3x2x1-Azul
+esperado 8x8x8-Verde - pri2:8x8x8-Verde
+esperado 1x1x1-Incoloro - pri3:1x1x1-Incoloro
+
+Valores finales
+esperado 1x1x1-Incoloro - pri0:1x1x1-Incoloro
+esperado 4x3x2-Azul - pri1:4x3x2-Azul
+esperado 7x7x7-Verde - pri2:7x7x7-Verde
+esperado 15x10x0-Azul - pri3:15x10x5-Azul

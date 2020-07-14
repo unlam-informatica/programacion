@@ -1,8 +1,8 @@
 
 ### Archivos binarios y de texto generados en los ejercicios ###
-guia**/*.txt
-guia**/*.bin
-guia**/*.dat
+tp**/*.txt
+tp**/*.bin
+tp**/*.dat
 
 ### C ###
 # Prerequisites

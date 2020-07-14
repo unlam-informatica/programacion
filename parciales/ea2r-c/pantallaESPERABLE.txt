@@ -1,0 +1,116 @@
+Primera Prueba - Eliminar Unicos y luego Repetidos.
+======= ======   ======== ====== = ===== =========
+En la lista hay 21 examenes finales.
+
+Mostrando los examenes finales.
+D. N. I. Apellido(s), Nombre(s)              Mat.Cali
+42013164 RODRIGUEZ, Alan Gonzalo             1107  5
+31535024 ALBERO del RIO, Laura Gabriela      1132  7
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1024  4
+49724167 SANCHEZ, Dalma Carolina             1110  4
+37789078 TAMANTI, Alexis Hernán              1110  7
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1115  7
+32277094 PEREZ, Juan                         1024  5
+47716699 RUIZ CARLETTI, Matías               1109  4
+31535024 ALBERO del RIO, Laura Gabriela      1110  5
+31106022 RUSSO, Emiliano                     1110  6
+31364084 ESPOSITO SEQUEIRA, Melani Antonella 1118  5
+49167369 SCHANZENBACH, Kevin Erik            1115  4
+36158817 RUIBAL, Florencia Lorena            1110  4
+45292882 LEDEZMA NUÑEZ, Lucas Ezequiel       1087  6
+38911354 BORGONOVO PAEZ, Omar Vladimir       1104  4
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1025  6
+42013164 RODRIGUEZ, Alan Gonzalo             1110  4
+31511626 PEREZ, Juan                         1110  7
+47716699 RUIZ CARLETTI, Matías               1107  8
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1110  8
+42013164 RODRIGUEZ, Alan Gonzalo             1114  7
+Se mostraron 21 examenes finales.
+
+Eliminar y mostrar los que dieron mas de un final.
+D. N. I. Apellido(s), Nombre(s)              Mat.Cali
+42013164 RODRIGUEZ, Alan Gonzalo             1107  5
+42013164 RODRIGUEZ, Alan Gonzalo             1110  4
+42013164 RODRIGUEZ, Alan Gonzalo             1114  7
+31535024 ALBERO del RIO, Laura Gabriela      1132  7
+31535024 ALBERO del RIO, Laura Gabriela      1110  5
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1024  4
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1115  7
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1025  6
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1110  8
+47716699 RUIZ CARLETTI, Matías               1109  4
+47716699 RUIZ CARLETTI, Matías               1107  8
+Se eliminaron 11 nodos repetidos.
+
+Eliminar y mostrar los que dieron un solo final.
+D. N. I. Apellido(s), Nombre(s)              Mat.Cali
+49724167 SANCHEZ, Dalma Carolina             1110  4
+37789078 TAMANTI, Alexis Hernán              1110  7
+32277094 PEREZ, Juan                         1024  5
+31106022 RUSSO, Emiliano                     1110  6
+31364084 ESPOSITO SEQUEIRA, Melani Antonella 1118  5
+49167369 SCHANZENBACH, Kevin Erik            1115  4
+36158817 RUIBAL, Florencia Lorena            1110  4
+45292882 LEDEZMA NUÑEZ, Lucas Ezequiel       1087  6
+38911354 BORGONOVO PAEZ, Omar Vladimir       1104  4
+31511626 PEREZ, Juan                         1110  7
+Se eliminaron 10 nodos unicos.
+
+
+Segunda Prueba - Eliminar Repetidos y luego Unicos.
+======= ======   ======== ========= = ===== ======
+En la lista hay 21 examenes finales.
+
+Mostrando los examenes finales.
+D. N. I. Apellido(s), Nombre(s)              Mat.Cali
+31364084 ESPOSITO SEQUEIRA, Melani Antonella 1118  5
+31106022 RUSSO, Emiliano                     1110  6
+31535024 ALBERO del RIO, Laura Gabriela      1110  5
+47716699 RUIZ CARLETTI, Matías               1109  4
+32277094 PEREZ, Juan                         1024  5
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1115  7
+37789078 TAMANTI, Alexis Hernán              1110  7
+49724167 SANCHEZ, Dalma Carolina             1110  4
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1024  4
+31535024 ALBERO del RIO, Laura Gabriela      1132  7
+42013164 RODRIGUEZ, Alan Gonzalo             1107  5
+42013164 RODRIGUEZ, Alan Gonzalo             1114  7
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1110  8
+47716699 RUIZ CARLETTI, Matías               1107  8
+31511626 PEREZ, Juan                         1110  7
+42013164 RODRIGUEZ, Alan Gonzalo             1110  4
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1025  6
+38911354 BORGONOVO PAEZ, Omar Vladimir       1104  4
+45292882 LEDEZMA NUÑEZ, Lucas Ezequiel       1087  6
+36158817 RUIBAL, Florencia Lorena            1110  4
+49167369 SCHANZENBACH, Kevin Erik            1115  4
+Se mostraron 21 examenes finales.
+
+Eliminar y mostrar los que dieron un solo final.
+D. N. I. Apellido(s), Nombre(s)              Mat.Cali
+31364084 ESPOSITO SEQUEIRA, Melani Antonella 1118  5
+31106022 RUSSO, Emiliano                     1110  6
+32277094 PEREZ, Juan                         1024  5
+37789078 TAMANTI, Alexis Hernán              1110  7
+49724167 SANCHEZ, Dalma Carolina             1110  4
+31511626 PEREZ, Juan                         1110  7
+38911354 BORGONOVO PAEZ, Omar Vladimir       1104  4
+45292882 LEDEZMA NUÑEZ, Lucas Ezequiel       1087  6
+36158817 RUIBAL, Florencia Lorena            1110  4
+49167369 SCHANZENBACH, Kevin Erik            1115  4
+Se eliminaron 10 nodos unicos.
+
+Eliminar y mostrar los que dieron mas de un final.
+D. N. I. Apellido(s), Nombre(s)              Mat.Cali
+31535024 ALBERO del RIO, Laura Gabriela      1110  5
+31535024 ALBERO del RIO, Laura Gabriela      1132  7
+47716699 RUIZ CARLETTI, Matías               1109  4
+47716699 RUIZ CARLETTI, Matías               1107  8
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1115  7
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1024  4
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1110  8
+39155330 CHAVEZ SALAZAR, Rodrigo Nahuel      1025  6
+42013164 RODRIGUEZ, Alan Gonzalo             1107  5
+42013164 RODRIGUEZ, Alan Gonzalo             1114  7
+42013164 RODRIGUEZ, Alan Gonzalo             1110  4
+Se eliminaron 11 nodos repetidos.
