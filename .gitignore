@@ -60,10 +60,10 @@ dkms.conf
 
 ### CodeBlocks ###
 # specific to CodeBlocks IDE
-*.layout
-*.depend
-*.save
-*.cbp
+# *.layout
+# *.depend
+# *.save
+# *.cbp
 # generated directories
 bin/
 obj/
