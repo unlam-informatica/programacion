@@ -68,4 +68,8 @@ dkms.conf
 bin/
 obj/
 
+### CLion ###
+.idea
+cmake-build-debug/
+
 # End of https://www.gitignore.io/api/c,codeblocks
