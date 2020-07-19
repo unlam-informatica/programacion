@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="programacion-unlam" />
+		<Option title="unlam-programacion-guia" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -63,6 +63,10 @@
 		<Unit filename="guia/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="guia/tp1/ej1/tp1_ej1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="guia/tp1/ej1/tp1_ej1.h" />
 		<Unit filename="guia/tp1/ej14/tp1_ej14.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -83,18 +87,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guia/tp1/ej18/tp1_ej18.h" />
-		<Unit filename="guia/tp1/ej1/tp1_ej1.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="guia/tp1/ej1/tp1_ej1.h" />
-		<Unit filename="guia/tp1/ej22/tp1_ej22.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="guia/tp1/ej22/tp1_ej22.h" />
 		<Unit filename="guia/tp1/ej2/tp1_ej2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guia/tp1/ej2/tp1_ej2.h" />
+		<Unit filename="guia/tp1/ej22/tp1_ej22.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="guia/tp1/ej22/tp1_ej22.h" />
 		<Unit filename="guia/tp1/ej3/tp1_ej3.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -103,14 +103,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guia/tp1/ej4/tp1_ej4.h" />
-		<Unit filename="guia/tp2/ej13/tp2_ej13.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="guia/tp2/ej13/tp2_ej13.h" />
 		<Unit filename="guia/tp2/ej1/tp2_ej1.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guia/tp2/ej1/tp2_ej1.h" />
+		<Unit filename="guia/tp2/ej13/tp2_ej13.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="guia/tp2/ej13/tp2_ej13.h" />
 		<Unit filename="guia/tp2/ej9/tp2_ej9.c">
 			<Option compilerVar="CC" />
 		</Unit>
