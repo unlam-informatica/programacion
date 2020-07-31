@@ -157,3 +157,159 @@
 	<stdlib.h>
 	<time.h>
 
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/fecha.c
+	"fecha.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/fecha.h
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/menu.c
+	<stdio.h>
+	<ctype.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/menu.h
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp1.c
+	<stdio.h>
+	"tp1.h"
+	"../tp1/ej1/tp1_ej1.h"
+	"../tp1/ej2/tp1_ej2.h"
+	"../tp1/ej3/tp1_ej3.h"
+	"../tp1/ej14/tp1_ej14.h"
+	"../tp1/ej15/tp1_ej15.h"
+	"../tp1/ej16/tp1_ej16.h"
+	"../tp1/ej18/tp1_ej18.h"
+	"../tp1/ej22/tp1_ej22.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp1.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej1/tp1_ej1.h
+	"../../core/types.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/types.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej2/tp1_ej2.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej3/tp1_ej3.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej14/tp1_ej14.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej15/tp1_ej15.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej16/tp1_ej16.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej18/tp1_ej18.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej22/tp1_ej22.h
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp2.c
+	<stdio.h>
+	"tp2.h"
+	"../tp2/ej1/tp2_ej1.h"
+	"../tp2/ej9/tp2_ej9.h"
+	"../tp2/ej13/tp2_ej13.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp2.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp2/ej1/tp2_ej1.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp2/ej9/tp2_ej9.h
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp2/ej13/tp2_ej13.h
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/utils.c
+	<stdio.h>
+	"utils.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/utils.h
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"core/tp1.h"
+	"core/tp2.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej1/tp1_ej1.c
+	<stdio.h>
+	"tp1_ej1.h"
+	"../../core/utils.h"
+	"../../core/types.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej14/tp1_ej14.c
+	<stdio.h>
+	"../../core/utils.h"
+	"../../core/fecha.h"
+	"tp1_ej14.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej15/tp1_ej15.c
+	<stdio.h>
+	"../../core/utils.h"
+	"../../core/fecha.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej16/tp1_ej16.c
+	<stdio.h>
+	"tp1_ej16.h"
+	"../../core/fecha.h"
+	"../../core/utils.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej17/tp1_ej17.c
+	<stdio.h>
+	"tp1_ej17.h"
+	"../../core/fecha.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej17/tp1_ej17.h
+	"../../core/fecha.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej18/tp1_ej18.c
+	<stdio.h>
+	"../../core/fecha.h"
+	"tp1_ej18.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej2/tp1_ej2.c
+	<stdio.h>
+	"tp1_ej2.h"
+	"../../core/utils.h"
+	"../ej1/tp1_ej1.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej22/tp1_ej22.c
+	<stdio.h>
+	"tp1_ej22.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej3/tp1_ej3.c
+	<stdio.h>
+	<math.h>
+	"tp1_ej3.h"
+	"../../core/utils.h"
+	"../ej1/tp1_ej1.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej4/tp1_ej4.c
+	<stdio.h>
+	"../ej4/tp1_ej4.h"
+	"../../core/utils.h"
+
+1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej4/tp1_ej4.h
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp2/ej1/tp2_ej1.c
+	<stdio.h>
+	"../../core/menu.h"
+	"tp2_ej1.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp2/ej13/tp2_ej13.c
+	<stdio.h>
+	<string.h>
+	"tp2_ej13.h"
+
+1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp2/ej9/tp2_ej9.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1596164168 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_estatica.c
+	<string.h>
+	"pila_estatica.h"
+
+1595798625 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_estatica.h
+

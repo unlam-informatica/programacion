@@ -39,14 +39,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guia/core/menu.h" />
-		<Unit filename="guia/core/pila_dinamica.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="guia/core/pila_dinamica.h" />
-		<Unit filename="guia/core/pila_estatica.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="guia/core/pila_estatica.h" />
 		<Unit filename="guia/core/tp1.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -115,52 +107,15 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guia/tp2/ej9/tp2_ej9.h" />
-		<Unit filename="parciales/ea1/funciones.c">
+		<Unit filename="tda/pila/pila.h" />
+		<Unit filename="tda/pila/pila_dinamica.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="parciales/ea1/funciones.h" />
-		<Unit filename="parciales/ea1/main.c">
+		<Unit filename="tda/pila/pila_dinamica.h" />
+		<Unit filename="tda/pila/pila_estatica.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="parciales/ea1/main.h" />
-		<Unit filename="parciales/ea2-c/funciones.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="parciales/ea2-c/funciones.h" />
-		<Unit filename="parciales/ea2-c/main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="parciales/ea2-c/main.h" />
-		<Unit filename="parciales/ea2-cpp/Prisma.cpp" />
-		<Unit filename="parciales/ea2-cpp/Prisma.h" />
-		<Unit filename="parciales/ea2-cpp/main.cpp" />
-		<Unit filename="parciales/ea2-cpp/main.h" />
-		<Unit filename="parciales/ea2r-c/funciones.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="parciales/ea2r-c/funciones.h" />
-		<Unit filename="parciales/ea2r-c/main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="parciales/ea2r-c/main.h" />
-		<Unit filename="parciales/ea3-c/funciones.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="parciales/ea3-c/funciones.h" />
-		<Unit filename="parciales/ea3-c/main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="parciales/ea3-c/main.h" />
-		<Unit filename="parciales/ea3-cpp/Cuadrado.cpp" />
-		<Unit filename="parciales/ea3-cpp/Cuadrado.h" />
-		<Unit filename="parciales/ea3-cpp/Figura.cpp" />
-		<Unit filename="parciales/ea3-cpp/Figura.h" />
-		<Unit filename="parciales/ea3-cpp/FiguraInvalidaException.h" />
-		<Unit filename="parciales/ea3-cpp/Rectangulo.cpp" />
-		<Unit filename="parciales/ea3-cpp/Rectangulo.h" />
-		<Unit filename="parciales/ea3-cpp/Triangulo.cpp" />
-		<Unit filename="parciales/ea3-cpp/Triangulo.h" />
-		<Unit filename="parciales/ea3-cpp/main.cpp" />
+		<Unit filename="tda/pila/pila_estatica.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
