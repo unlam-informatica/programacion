@@ -37,6 +37,6 @@ void correr_ejercicio_tp1(int ej) {
         tp1_ej22();
         break;
     default:
-        printf("El número de ejercicio no existe o a�n no fue implementado.");
+        printf("El número de ejercicio no existe o aún no fue implementado.");
     }
 }
