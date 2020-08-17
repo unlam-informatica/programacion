@@ -171,7 +171,7 @@
 
 1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/menu.h
 
-1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp1.c
+1596164424 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp1.c
 	<stdio.h>
 	"tp1.h"
 	"../tp1/ej1/tp1_ej1.h"
@@ -183,7 +183,7 @@
 	"../tp1/ej18/tp1_ej18.h"
 	"../tp1/ej22/tp1_ej22.h"
 
-1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp1.h
+1596164449 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/tp1.h
 
 1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/tp1/ej1/tp1_ej1.h
 	"../../core/types.h"
@@ -225,7 +225,7 @@
 
 1595185920 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/core/utils.h
 
-1595185920 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/main.c
+1596164379 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/guia/main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -307,9 +307,26 @@
 	<stdlib.h>
 	<time.h>
 
-1596164168 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_estatica.c
+1596418910 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_estatica.c
 	<string.h>
 	"pila_estatica.h"
 
-1595798625 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_estatica.h
+1596418707 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_estatica.h
+
+1596405344 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/cola/cola_dinamica.c
+	"cola_dinamica.h"
+
+1596405531 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/cola/cola_dinamica.h
+
+1596385183 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/cola/cola_estatica.c
+	"cola_estatica.h"
+
+1596405536 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/cola/cola_estatica.h
+
+1596418300 source:/home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_dinamica.c
+	<string.h>
+	<stdlib.h>
+	"pila_dinamica.h"
+
+1596418268 /home/marcos/dev/workspace/unlam/programacion/unlam-programacion-guia/tda/pila/pila_dinamica.h
 

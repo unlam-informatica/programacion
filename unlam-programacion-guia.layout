@@ -2,29 +2,34 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="tda/pila/pila_estatica.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="223" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="guia/core/utils.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="116" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="guia/core/fecha.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="tda/pila/pila_dinamica.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="189" topLine="0" />
+			<Cursor1 position="293" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="tda/pila/pila_dinamica.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="tda/cola/cola_dinamica.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="337" topLine="0" />
+			<Cursor1 position="67" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="tda/pila/pila.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="guia/main.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="49" topLine="0" />
+			<Cursor1 position="105" topLine="5" />
 		</Cursor>
 	</File>
-	<File name="guia/core/utils.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="tda/cola/cola_dinamica.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="109" topLine="0" />
+			<Cursor1 position="28" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="guia/core/menu.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -32,14 +37,44 @@
 			<Cursor1 position="524" topLine="2" />
 		</Cursor>
 	</File>
-	<File name="tda/pila/pila_estatica.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="tda/pila/pila_dinamica.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1088" topLine="31" />
+			<Cursor1 position="354" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="tda/pila/pila_dinamica.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="tda/cola/cola_estatica.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="176" topLine="0" />
+			<Cursor1 position="3061" topLine="78" />
+		</Cursor>
+	</File>
+	<File name="guia/core/types.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="162" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="guia/core/utils.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="109" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="guia/core/fecha.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="189" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="guia/core/tp1.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="105" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="tda/pila/pila_estatica.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="221" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="tda/cola/cola_estatica.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="630" topLine="3" />
 		</Cursor>
 	</File>
 	<File name="guia/core/tp1.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -50,26 +85,6 @@
 	<File name="guia/core/menu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="123" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="guia/core/types.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="162" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="guia/core/tp1.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="105" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="guia/main.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="989" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="tda/pila/pila_estatica.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="191" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

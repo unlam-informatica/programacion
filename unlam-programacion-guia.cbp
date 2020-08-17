@@ -107,7 +107,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guia/tp2/ej9/tp2_ej9.h" />
-		<Unit filename="tda/pila/pila.h" />
+		<Unit filename="tda/cola/cola_dinamica.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tda/cola/cola_dinamica.h" />
+		<Unit filename="tda/cola/cola_estatica.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tda/cola/cola_estatica.h" />
 		<Unit filename="tda/pila/pila_dinamica.c">
 			<Option compilerVar="CC" />
 		</Unit>
