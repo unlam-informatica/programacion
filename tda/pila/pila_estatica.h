@@ -1,6 +1,9 @@
 #ifndef PilaEstatica_ESTATICA_INCLUDED
 #define PilaEstatica_ESTATICA_INCLUDED
 
+#define FALSO 0
+#define VERDADERO 1
+
 #define TAM_PILA 500
 #define minimo(X, Y) ((X) <= (Y) ? (X) : (Y))
 
@@ -12,13 +15,13 @@ typedef struct
 
 void crearPila(PilaEstatica *p);
 
-int PilaLlena(const PilaEstatica *p, unsigned cantBytes);
+int pilaLlena(const PilaEstatica *p, unsigned cantBytes);
 
-int ponerEnPila(PilaEstatica *p, const void *d, unsigned cantBytes);
+int pilaVacia(const PilaEstatica *p);
 
 int verTope(const PilaEstatica *p, void *d, unsigned cantBytes);
 
-int PilaVacia(const PilaEstatica *p);
+int ponerEnPila(PilaEstatica *p, const void *d, unsigned cantBytes);
 
 int sacarDePila(PilaEstatica *p, void *d, unsigned cantBytes);
 

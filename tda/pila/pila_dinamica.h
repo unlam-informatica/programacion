@@ -10,7 +10,7 @@ typedef struct Nodo {
 
 } Nodo;
 
-typedef Nodo *PilaDinamica;
+typedef Nodo* PilaDinamica;
 
 void crearPilaDinamica(PilaDinamica *p);
 
