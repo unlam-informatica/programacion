@@ -1,21 +1,24 @@
+#include <string.h>
+#include <stdlib.h>
+
 #include "pila_dinamica.h"
 
-void crearPila(Pila *p)
+void crearPilaDinamica(PilaDinamica *p)
 {
     *p = NULL;
 }
 
-int pilaLlena(const Pila *p, unsigned cantBytes)
+int PilaDinamicaLlena(const PilaDinamica *p, unsigned cantBytes)
 {
     Nodo *aux = (Nodo *) malloc (sizeof(Nodo));
     void *info = malloc(cantBytes);
 
     free(aux);
     free(info);
-    return aux = NULL || info == NULL;
+    return aux == NULL || info == NULL;
 }
 
-int ponerEnPila(Pila *p, const void *d, unsigned cantBytes)
+int ponerEnPilaDinamica(PilaDinamica *p, const void *d, unsigned cantBytes)
 {
     Nodo *nue = (Nodo *) malloc(sizeof(Nodo));
     nue->info = malloc(cantBytes);
@@ -32,7 +35,7 @@ int ponerEnPila(Pila *p, const void *d, unsigned cantBytes)
     return 1;
 }
 
-int verTope(const Pila *p, void *d, unsigned cantBytes)
+int verTopePilaDinamica(const PilaDinamica *p, void *d, unsigned cantBytes)
 {
     if(*p == NULL){
         return 0;
@@ -41,11 +44,11 @@ int verTope(const Pila *p, void *d, unsigned cantBytes)
     return 1;
 }
 
-int pilaVacia(const Pila *p) {
+int PilaDinamicaVacia(const PilaDinamica *p) {
     return *p == NULL;
 }
 
-int sacarDePila(Pila *p, void *d, unsigned cantBytes) {
+int sacarDePilaDinamica(PilaDinamica *p, void *d, unsigned cantBytes) {
     Nodo *aux = *p;
     if(aux == NULL){
         return 0;
@@ -57,7 +60,7 @@ int sacarDePila(Pila *p, void *d, unsigned cantBytes) {
     return 1;
 }
 
-void vaciarPila(Pila *p) {
+void vaciarPilaDinamica(PilaDinamica *p) {
     while(*p){
         Nodo *aux = *p;
         *p = aux->sig;

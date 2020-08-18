@@ -2,61 +2,75 @@
 
 #include "pila_estatica.h"
 
-void crearPila(Pila *p)
+void crearPila(PilaEstatica *p)
 {
-    p->tope = TAM_PILA;
+    p->tope = 0;
 }
 
-int pilaLlena(const Pila *p, unsigned cantBytes)
+int pilaLlena(const PilaEstatica *p, unsigned tamElem)
 {
-    return p->tope < cantBytes + sizeof(unsigned);
+    return p->tope + tamElem + sizeof(unsigned) > TAM_PILA;
 }
 
-// Cada vez que pongo un valor en la pila, disminuyo los bytes disponibles en tope
-int ponerEnPila(Pila *p, const void *d, unsigned cantBytes)
+int pilaVacia(const PilaEstatica *p)
 {
-    if(p->tope < cantBytes + sizeof(unsigned))
+    return p->tope == 0;
+}
+
+int ponerEnPila(PilaEstatica *p, const void *d, unsigned tamElem)
+{
+    if(p->tope + tamElem + sizeof(unsigned) > TAM_PILA)
     {
-        return 0;
+        return FALSO;
     }
-    p->tope -= cantBytes;
-    memcpy(p->pila + p->tope, d, cantBytes);
-    p->tope -= sizeof(unsigned);
-    memcpy(p->pila + p->tope, &cantBytes, sizeof(unsigned));
-    return 1;
-}
 
-int verTope(const Pila *p, void *d, unsigned cantBytes)
-{
-    unsigned tamInfo;
+    // incremento por el tamaño del dato
+    p->tope += tamElem;
+    memcpy(p->pila + p->tope, d, tamElem);
 
-    if(p->tope == TAM_PILA)
-    {
-        return 0;
-    }
-    memcpy(&tamInfo, p->pila + p->tope, sizeof(unsigned));
-    memcpy(d, p->pila + p->tope + sizeof(unsigned), minimo(cantBytes, tamInfo));
-    return 1;
-}
-
-int pilaVacia(const Pila *p)
-{
-    return p->tope == TAM_PILA;
-}
-
-int sacarDePila(Pila *p, void *d, unsigned cantBytes) {
-    unsigned tamInfo;
-
-    if(t->tope == TAM_PILA){
-        return 0;
-    }
-    memcpy(&tamInfo, p->pila + p->tope, sizeof(unsigned));
+    // incremento por el tamaño de la variable que almacena el tamaño del dato
     p->tope += sizeof(unsigned);
-    memcpy(d, p->pila + p->tope, minimo(cantBytes, tamInfo));
-    p->tope += tamInfo;
-    return 1;
+    memcpy(p->pila + p->tope, &tamElem, sizeof(unsigned));
+
+    return VERDADERO;
 }
 
-void vaciarPila(Pila *p){
-    p->tope = TAM_PILA;
+int sacarDePila(PilaEstatica *p, void *d, unsigned tamElem)
+{
+    if(p->tope == 0)
+    {
+        return FALSO;
+    }
+
+    // retrocedo y leo el tamaño
+    p->tope -= sizeof(unsigned);
+    unsigned tamElemReal = *(unsigned *)(p->pila + p->tope);
+
+    // retrocedo el tamaño
+    p->tope -= tamElemReal;
+    memcpy(d, p->pila + p->tope, minimo(tamElem, tamInfo));
+
+    return VERDADERO;
+}
+
+int verTope(const PilaEstatica *p, void *d, unsigned tamElem)
+{
+    if(p->tope == 0)
+    {
+        return FALSO;
+    }
+
+    unsigned topeTmp = p->tope;
+
+    topeTmp -= sizeof(unsigned);
+    unsigned tamElemReal = *(unsigned *)(p->pila + topeTmp);
+
+    topeTmp -= tamElemReal;
+    memcpy(d, p->pila + topeTmp, minimo(tamElem, tamElemReal))
+    return VERDADERO;
+}
+
+void vaciarPila(PilaEstatica *p)
+{
+    p->tope = 0;
 }
