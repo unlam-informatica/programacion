@@ -1,70 +1,81 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include "../../guia/core/types.h"
 #include "pila_dinamica.h"
 
-void crearPilaDinamica(PilaDinamica *p)
+void crearPila(Pila *p)
 {
     *p = NULL;
 }
 
-int PilaDinamicaLlena(const PilaDinamica *p, unsigned cantBytes)
+void vaciarPila(Pila *p)
+{
+    while(*p)
+    {
+        Nodo *aux = *p;
+        *p = aux->sig;
+        free(aux->info);
+        free(aux);
+    }
+}
+
+int PilaVacia(const Pila *p)
+{
+    return *p == NULL;
+}
+
+int PilaLlena(const Pila *p, unsigned tamElem)
 {
     Nodo *aux = (Nodo *) malloc (sizeof(Nodo));
-    void *info = malloc(cantBytes);
+    void *info = malloc(tamElem);
 
     free(aux);
     free(info);
     return aux == NULL || info == NULL;
 }
 
-int ponerEnPilaDinamica(PilaDinamica *p, const void *d, unsigned cantBytes)
+int ponerEnPila(Pila *p, const void *d, unsigned tamElem)
 {
     Nodo *nue = (Nodo *) malloc(sizeof(Nodo));
-    nue->info = malloc(cantBytes);
+    nue->info = malloc(tamElem);
     if(nue == NULL || nue->info == NULL)
     {
         free(nue->info);
         free(nue);
-        return 0;
+        return FALSO;
     }
-    memcpy(nue->info, d, cantBytes);
-    nue->tamInfo = cantBytes;
+    memcpy(nue->info, d, tamElem);
+    nue->tamInfo = tamElem;
     nue->sig = *p;
     *p = nue;
-    return 1;
+    return VERDADERO;
 }
 
-int verTopePilaDinamica(const PilaDinamica *p, void *d, unsigned cantBytes)
+int sacarDePila(Pila *p, void *d, unsigned tamElem)
 {
-    if(*p == NULL){
-        return 0;
+    if(*p == NULL)
+    {
+        return FALSO;
     }
-    memcpy(d, (*p)->info, minimo(cantBytes, (*p)->tamInfo));
-    return 1;
-}
 
-int PilaDinamicaVacia(const PilaDinamica *p) {
-    return *p == NULL;
-}
-
-int sacarDePilaDinamica(PilaDinamica *p, void *d, unsigned cantBytes) {
     Nodo *aux = *p;
-    if(aux == NULL){
-        return 0;
-    }
     *p = aux->sig;
-    memcpy(d, aux->info, minimo(cantBytes, aux->tamInfo));
+    memcpy(d, aux->info, minimo(tamElem, aux->tamInfo));
+
     free(aux->info);
     free(aux);
-    return 1;
+
+    return VERDADERO;
 }
 
-void vaciarPilaDinamica(PilaDinamica *p) {
-    while(*p){
-        Nodo *aux = *p;
-        *p = aux->sig;
-        free(aux->info);
-        free(aux);
+int verTopePila(const Pila *p, void *d, unsigned tamElem)
+{
+    if(*p == NULL)
+    {
+        return FALSO;
     }
+
+    memcpy(d, (*p)->info, minimo(tamElem, (*p)->tamInfo));
+    return VERDADERO;
 }

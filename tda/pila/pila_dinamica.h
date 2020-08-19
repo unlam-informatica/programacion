@@ -10,20 +10,20 @@ typedef struct Nodo {
 
 } Nodo;
 
-typedef Nodo* PilaDinamica;
+typedef Nodo* Pila;
 
-void crearPilaDinamica(PilaDinamica *p);
+void crearPila(Pila *p);
 
-int PilaDinamicaLlena(const PilaDinamica *p, unsigned cantBytes);
+void vaciarPila(Pila *p);
 
-int ponerEnPilaDinamica(PilaDinamica *p, const void *d, unsigned cantBytes);
+int PilaVacia(const Pila *p);
 
-int verTope(const PilaDinamica *p, void *d, unsigned cantBytes);
+int PilaLlena(const Pila *p, unsigned cantBytes);
 
-int PilaDinamicaVacia(const PilaDinamica *p);
+int ponerEnPila(Pila *p, const void *d, unsigned cantBytes);
 
-int sacarDePilaDinamica(PilaDinamica *p, void *d, unsigned cantBytes);
+int sacarDePila(Pila *p, void *d, unsigned cantBytes);
 
-void vaciarPilaDinamica(PilaDinamica *p);
+int verTope(const Pila *p, void *d, unsigned cantBytes);
 
 #endif // PILA_DINAMICA_H_INCLUDED
