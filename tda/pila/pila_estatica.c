@@ -7,14 +7,19 @@ void crearPila(PilaEstatica *p)
     p->tope = 0;
 }
 
-int pilaLlena(const PilaEstatica *p, unsigned tamElem)
-{
-    return p->tope + tamElem + sizeof(unsigned) > TAM_PILA;
-}
-
 int pilaVacia(const PilaEstatica *p)
 {
     return p->tope == 0;
+}
+
+void vaciarPila(PilaEstatica *p)
+{
+    p->tope = 0;
+}
+
+int pilaLlena(const PilaEstatica *p, unsigned tamElem)
+{
+    return p->tope + tamElem + sizeof(unsigned) > TAM_PILA;
 }
 
 int ponerEnPila(PilaEstatica *p, const void *d, unsigned tamElem)
@@ -60,6 +65,7 @@ int verTope(const PilaEstatica *p, void *d, unsigned tamElem)
         return FALSO;
     }
 
+    // utilizo tome temporal porque la funcion no modifica la pila
     unsigned topeTmp = p->tope;
 
     topeTmp -= sizeof(unsigned);
@@ -68,9 +74,4 @@ int verTope(const PilaEstatica *p, void *d, unsigned tamElem)
     topeTmp -= tamElemReal;
     memcpy(d, p->pila + topeTmp, minimo(tamElem, tamElemReal))
     return VERDADERO;
-}
-
-void vaciarPila(PilaEstatica *p)
-{
-    p->tope = 0;
 }

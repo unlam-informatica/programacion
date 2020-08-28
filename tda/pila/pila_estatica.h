@@ -1,9 +1,6 @@
 #ifndef PilaEstatica_ESTATICA_INCLUDED
 #define PilaEstatica_ESTATICA_INCLUDED
 
-#define FALSO 0
-#define VERDADERO 1
-
 #define TAM_PILA 500
 #define minimo(X, Y) ((X) <= (Y) ? (X) : (Y))
 
