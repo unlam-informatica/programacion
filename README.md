@@ -1,6 +1,6 @@
 # Programación UNLaM
 
-Guía de ejercicios y parciales resueltos de programación de la UNLaM
+Guía de ejercicios resueltos e implementación DE TDAs de la cátedra de programación de la UNLaM
 
 ## Configuración para Linux
 Se debe agregar el flag de compilación `-lm` para poder builder el proyecto.
