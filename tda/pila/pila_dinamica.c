@@ -9,6 +9,11 @@ void crearPila(Pila *p)
     *p = NULL;
 }
 
+int pilaVacia(const Pila *p)
+{
+    return *p == NULL;
+}
+
 void vaciarPila(Pila *p)
 {
     while(*p)
@@ -20,12 +25,7 @@ void vaciarPila(Pila *p)
     }
 }
 
-int PilaVacia(const Pila *p)
-{
-    return *p == NULL;
-}
-
-int PilaLlena(const Pila *p, unsigned tamElem)
+int pilaLlena(const Pila *p, unsigned tamElem)
 {
     Nodo *aux = (Nodo *) malloc (sizeof(Nodo));
     void *info = malloc(tamElem);

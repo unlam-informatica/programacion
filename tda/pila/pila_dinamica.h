@@ -16,9 +16,9 @@ void crearPila(Pila *p);
 
 void vaciarPila(Pila *p);
 
-int PilaVacia(const Pila *p);
+int pilaVacia(const Pila *p);
 
-int PilaLlena(const Pila *p, unsigned cantBytes);
+int pilaLlena(const Pila *p, unsigned cantBytes);
 
 int ponerEnPila(Pila *p, const void *d, unsigned cantBytes);
 
