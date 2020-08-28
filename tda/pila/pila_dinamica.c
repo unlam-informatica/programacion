@@ -4,17 +4,17 @@
 #include "../../guia/core/types.h"
 #include "pila_dinamica.h"
 
-void crearPila(Pila *p)
+void crearPilaDinamica(PilaDinamica *p)
 {
     *p = NULL;
 }
 
-int pilaVacia(const Pila *p)
+int PilaDinamicaVacia(const PilaDinamica *p)
 {
     return *p == NULL;
 }
 
-void vaciarPila(Pila *p)
+void vaciarPilaDinamica(PilaDinamica *p)
 {
     while(*p)
     {
@@ -25,7 +25,7 @@ void vaciarPila(Pila *p)
     }
 }
 
-int pilaLlena(const Pila *p, unsigned tamElem)
+int pilaDinamicaLlena(const PilaDinamica *p, unsigned tamElem)
 {
     Nodo *aux = (Nodo *) malloc (sizeof(Nodo));
     void *info = malloc(tamElem);
@@ -35,7 +35,7 @@ int pilaLlena(const Pila *p, unsigned tamElem)
     return aux == NULL || info == NULL;
 }
 
-int ponerEnPila(Pila *p, const void *d, unsigned tamElem)
+int ponerEnPilaDinamica(PilaDinamica *p, const void *d, unsigned tamElem)
 {
     Nodo *nue = (Nodo *) malloc(sizeof(Nodo));
     nue->info = malloc(tamElem);
@@ -52,7 +52,7 @@ int ponerEnPila(Pila *p, const void *d, unsigned tamElem)
     return VERDADERO;
 }
 
-int sacarDePila(Pila *p, void *d, unsigned tamElem)
+int sacarDePilaDinamica(PilaDinamica *p, void *d, unsigned tamElem)
 {
     if(*p == NULL)
     {
@@ -69,7 +69,7 @@ int sacarDePila(Pila *p, void *d, unsigned tamElem)
     return VERDADERO;
 }
 
-int verTopePila(const Pila *p, void *d, unsigned tamElem)
+int verTopePilaDinamica(const PilaDinamica *p, void *d, unsigned tamElem)
 {
     if(*p == NULL)
     {

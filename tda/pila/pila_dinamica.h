@@ -1,5 +1,5 @@
-#ifndef PILA_DINAMICA_H_INCLUDED
-#define PILA_DINAMICA_H_INCLUDED
+#ifndef PilaDinamica_DINAMICA_H_INCLUDED
+#define PilaDinamica_DINAMICA_H_INCLUDED
 
 #define minimo(X, Y) ((X) <= (Y) ? (X) : (Y))
 
@@ -10,20 +10,20 @@ typedef struct Nodo {
 
 } Nodo;
 
-typedef Nodo* Pila;
+typedef Nodo* PilaDinamica;
 
-void crearPila(Pila *p);
+void crearPilaDinamica(PilaDinamica *p);
 
-void vaciarPila(Pila *p);
+void vaciarPilaDinamica(PilaDinamica *p);
 
-int pilaVacia(const Pila *p);
+int pilaDinamicaVacia(const PilaDinamica *p);
 
-int pilaLlena(const Pila *p, unsigned cantBytes);
+int pilaDinamicaLlena(const PilaDinamica *p, unsigned cantBytes);
 
-int ponerEnPila(Pila *p, const void *d, unsigned cantBytes);
+int ponerEnPilaDinamica(PilaDinamica *p, const void *d, unsigned cantBytes);
 
-int sacarDePila(Pila *p, void *d, unsigned cantBytes);
+int sacarDePilaDinamica(PilaDinamica *p, void *d, unsigned cantBytes);
 
-int verTope(const Pila *p, void *d, unsigned cantBytes);
+int verTopePilaDinamica(const PilaDinamica *p, void *d, unsigned cantBytes);
 
-#endif // PILA_DINAMICA_H_INCLUDED
+#endif // PilaDinamica_DINAMICA_H_INCLUDED
