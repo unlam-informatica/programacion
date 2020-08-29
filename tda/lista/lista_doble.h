@@ -19,11 +19,11 @@ int vaciarListaDoble(ListaDoble *p);
 
 int listaDobleVacia(const ListaDoble *p);
 
-int listaDobleLlena(const ListaDoble *p);
+int listaDobleLlena(const ListaDoble *p, unsigned tamElem);
 
-int insertarAlFinalListaDoble(const ListaDoble *p, const void *d, unsigned tamElem);
+int insertarAlFinalListaDoble(ListaDoble *p, const void *d, unsigned tamElem);
 
-int insertarAlInicioListaDoble(const ListaDoble *p, const void *d, unsigned tamElem);
+int insertarAlInicioListaDoble(ListaDoble *p, const void *d, unsigned tamElem);
 
 int mostrarIzqADerListaDoble(const ListaDoble *p, void (* mostrar)(const void *));
 
