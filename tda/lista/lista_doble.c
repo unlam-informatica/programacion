@@ -234,7 +234,47 @@ int insertarEnOrdenListaDoble(ListaDoble *p,
 
 void ordenarListaDoble(ListaDoble *p, int (*comparar)(const void *, const void *))
 {
+    Nodo *act = *p;
+    Nodo *sup = NULL;
+    Nodo *inf = NULL;
+    int marca = 1;
+    if(act = NULL){
+        return;
+    }
+    while(act->ant){
+        act = act->ant;
+    }
+    while(marca){
+        marca = 0;
+        while(act->sig != sup){
+            if(comparar(act->info, act->sig->info) > 0){
+                void *inf = act->info;
+                unsigned tam = act->tamInfo;
 
+                marca = 1;
+                act->info = act->sig->info;
+                act->sig->info = inf;
+                act->tamInfo = act->sig->tamInfo;
+                act->sig->tamInfo = tam;
+            }
+            act = act->sig;
+        }
+        sup = act;
+        while(act->ant != inf){
+            if(comparar(act->info, act->ant->info) < 0){
+                void *inf = act->info;
+                unsigned tam = act->tamInfo;
+
+                marca = 1;
+                act->info = act->ant->info;
+                act->ant->info = inf;
+                act->tamInfo = act->ant->tamInfo;
+                act->ant->tamInfo = tam;
+            }
+            act = act->ant;
+        }
+        inf = act;
+    }
 }
 
 int eliminarPorClaveListaDoble(ListaDoble *p,
