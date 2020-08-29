@@ -115,6 +115,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tda/cola/cola_estatica.h" />
+		<Unit filename="tda/lista/lista_doble.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tda/lista/lista_doble.h" />
+		<Unit filename="tda/lista/lista_simple.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tda/lista/lista_simple.h" />
 		<Unit filename="tda/pila/pila_dinamica.c">
 			<Option compilerVar="CC" />
 		</Unit>
