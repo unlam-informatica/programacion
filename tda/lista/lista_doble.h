@@ -1,6 +1,10 @@
 #ifndef LISTA_DOBLE_H_INCLUDED
 #define LISTA_DOBLE_H_INCLUDED
 
+#define SIN_MEM 0
+#define TODO_BIEN 1
+#define CLA_DUP 2
+
 typedef struct sNodo {
     void *info;
     unsigned tamInfo;
